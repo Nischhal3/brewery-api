@@ -1,0 +1,23 @@
+.search-bar {
+  margin: 20px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  width: 40%;
+  margin-right: 10px;
+  height: 27px;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 414px) {
+  .search-bar {
+    justify-content: flex-start;
+  }
+
+  .search-input {
+    width: 55%;
+    margin-left: 10px;
+  }
+}
