@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import SearchButton from '../Button/SearchButton';
 import './Search.css';
+import Button from '../Button/Button';
 
 const SearchBar = ({ data, handleInputChange }) => {
   const [searchField, setSearchField] = useState('');
@@ -21,7 +21,7 @@ const SearchBar = ({ data, handleInputChange }) => {
     setSearchField(e.target.value);
   };
 
-  const pressButton = () => {
+  const handleClick = () => {
     if (filteredData.length === 0) {
       alert('Item not found');
     }
@@ -38,7 +38,7 @@ const SearchBar = ({ data, handleInputChange }) => {
         placeholder="search...."
         onChange={handleChange}
       />
-      <SearchButton pressButton={pressButton} />
+      <Button text="Search" handleClick={handleClick} />
     </div>
   );
 };
